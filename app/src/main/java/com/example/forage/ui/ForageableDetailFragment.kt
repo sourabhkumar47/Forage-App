@@ -68,7 +68,7 @@ class ForageableDetailFragment : Fragment() {
         val id = navigationArgs.id
         // TODO: Observe a forageable that is retrieved by id, set the forageable variable,
         //  and call the bind forageable method
-        viewModel.retrieveForageable(id).observe(this.viewLifecycleOwner) { selectedForageable ->
+        viewModel.getForageable(id).observe(this.viewLifecycleOwner) { selectedForageable ->
             forageable = selectedForageable
             bindForageable()
         }
