@@ -32,7 +32,7 @@ abstract class ForageDatabase : RoomDatabase() {
     abstract fun forageableDao(): ForageableDao
 
     companion object {
-        private val INSTANCE: ForageDatabase? = null
+        private var INSTANCE: ForageDatabase? = null
 
         // if the INSTANCE is not null, then return it,
         // if it is, then create the database
